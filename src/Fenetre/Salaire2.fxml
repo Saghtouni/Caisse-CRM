@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1219.0" prefWidth="1366.0" type="ScrollPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <content>
+      <AnchorPane fx:id="anchorPane" prefHeight="1208.0" prefWidth="1364.0" styleClass="CAISSE-FINAL" stylesheets="@Fenetre2.css">
+         <children>
+            <Label layoutX="36.0" layoutY="14.0" prefHeight="27.0" prefWidth="212.0" text="Décompte de salaire" AnchorPane.leftAnchor="36.0" AnchorPane.topAnchor="14.0">
+               <font>
+                  <Font name="Segoe UI Bold" size="21.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#bc3f00" />
+                        <Stop color="#fffa00" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Label fx:id="nomEntreprise" layoutX="956.0" layoutY="14.0" prefHeight="27.0" prefWidth="301.0" AnchorPane.rightAnchor="107.0" AnchorPane.topAnchor="14.0">
+               <font>
+                  <Font name="Segoe UI Bold" size="21.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#bc3f00" />
+                        <Stop color="#fffa00" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <GridPane layoutX="36.0" layoutY="34.0" prefHeight="108.0" prefWidth="357.0" AnchorPane.leftAnchor="36.0" AnchorPane.topAnchor="34.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="55.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label prefHeight="37.0" prefWidth="164.0" text="Période :" textFill="#eeeeee">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="47.0" prefWidth="164.0" text="Département :" textFill="#eeeeee" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="37.0" prefWidth="161.0" text="No personnel :" textFill="#eeeeee" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="departement" prefHeight="43.0" prefWidth="163.0" text="EXP Exploitation" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="numPersonal" prefHeight="13.0" prefWidth="161.0" textFill="#eeeeee" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Segoe UI Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <JFXDatePicker fx:id="datePeriode" defaultColor="#3dab27" onAction="#dateclcked" prefHeight="37.0" prefWidth="178.0" styleClass="text-field" stylesheets="@Fenetre2.css" GridPane.columnIndex="1" />
+               </children>
+            </GridPane>
+            <GridPane layoutX="956.0" layoutY="114.0" prefHeight="120.0" prefWidth="343.0" AnchorPane.rightAnchor="140.0" AnchorPane.topAnchor="130.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="35.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="62.0" minHeight="10.0" prefHeight="58.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label fx:id="sex" prefHeight="30.0" prefWidth="346.0" textFill="#eeeeee">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="nomPrenom" prefHeight="31.0" prefWidth="353.0" textFill="#eeeeee" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="41.0" prefWidth="163.0" textFill="#eeeeee" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Segoe UI Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="adresse" prefHeight="60.0" prefWidth="343.0" textFill="#eeeeee" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+            <JFXButton fx:id="bntEmployer" layoutX="1074.0" layoutY="58.0" onAction="#bntEmployerClicked" prefHeight="41.0" prefWidth="149.0" styleClass="ipad-grey2" stylesheets="@Fenetre.css" text="Employer" AnchorPane.rightAnchor="141.0" AnchorPane.topAnchor="58.0">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </JFXButton>
+            <GridPane layoutX="36.0" layoutY="191.0" prefHeight="135.0" prefWidth="494.0" AnchorPane.leftAnchor="36.0" AnchorPane.topAnchor="191.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="294.0" minWidth="10.0" prefWidth="294.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="200.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="55.0" minHeight="3.0" prefHeight="27.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label prefHeight="23.0" prefWidth="295.0" text="Profession :" textFill="#eeeeee">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="25.0" prefWidth="206.0" text="Salaire de base à 100% :" textFill="#eeeeee" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="profession" prefHeight="27.0" prefWidth="200.0" textFill="#eeeeee" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="24.0" prefWidth="303.0" text="Taux d'occupation selon contrat :" textFill="#eeeeee" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="24.0" prefWidth="293.0" text="Date édition :" textFill="#eeeeee" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="24.0" prefWidth="296.0" text="Date entrée :" textFill="#eeeeee" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="24.0" prefWidth="293.0" text="Date sortie :" textFill="#eeeeee" visible="false" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="baseSalaire" prefHeight="27.0" prefWidth="200.0" textFill="#eeeeee" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="tauxOccup" prefHeight="27.0" prefWidth="200.0" textFill="#eeeeee" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="edition" prefHeight="27.0" prefWidth="200.0" textFill="#eeeeee" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="entree" prefHeight="27.0" prefWidth="200.0" textFill="#eeeeee" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="sortie" prefHeight="27.0" prefWidth="200.0" textFill="#eeeeee" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+            <GridPane layoutX="37.0" layoutY="371.0" prefHeight="606.0" prefWidth="476.0" AnchorPane.bottomAnchor="231.0" AnchorPane.leftAnchor="37.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="656.0" minWidth="10.0" prefWidth="407.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="55.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <JFXCheckBox fx:id="IndemniteG" onAction="#IndemniteGclick" prefHeight="39.0" prefWidth="396.0" styleClass="text-field" stylesheets="@Fenetre2.css" text="1038 Indemnité vacances" unCheckedColor="#10da86" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font></JFXCheckBox>
+                  <JFXCheckBox fx:id="salaireHoraireG" onAction="#salaireHoraireGClick" prefHeight="39.0" prefWidth="396.0" styleClass="text-field" stylesheets="@Fenetre2.css" text="1030 Salaire horaire" unCheckedColor="#10da86">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font></JFXCheckBox>
+                  <JFXCheckBox fx:id="feriesG" onAction="#feriesGclick" prefHeight="39.0" prefWidth="398.0" styleClass="text-field" stylesheets="@Fenetre2.css" text="1057 Jours fériés (heures)" unCheckedColor="#10da86" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font></JFXCheckBox>
+                  <JFXCheckBox fx:id="salaireG" onAction="#salaireGclicked" prefHeight="39.0" prefWidth="405.0" styleClass="text-field" stylesheets="@Fenetre2.css" text="1201 13ème salaire paiement mensuel " unCheckedColor="#10da86" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font></JFXCheckBox>
+                  <Label fx:id="brutG" prefHeight="43.0" prefWidth="386.0" text="1999 SALAIRE BRUT" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Segoe UI Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <JFXCheckBox fx:id="avsG" onAction="#avsGclicked" prefHeight="39.0" prefWidth="405.0" styleClass="text-field" stylesheets="@Fenetre2.css" text="2030 AVS-Retenue" unCheckedColor="#10da86" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </JFXCheckBox>
+                  <JFXCheckBox fx:id="acG" onAction="#acGclicked" prefHeight="39.0" prefWidth="405.0" styleClass="text-field" stylesheets="@Fenetre2.css" text="2090 AC-Retenue" unCheckedColor="#10da86" GridPane.rowIndex="6">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </JFXCheckBox>
+                  <JFXCheckBox fx:id="aanpG" onAction="#acGclicked" prefHeight="39.0" prefWidth="405.0" styleClass="text-field" stylesheets="@Fenetre2.css" text="2140 AANP" unCheckedColor="#10da86" GridPane.rowIndex="7">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </JFXCheckBox>
+                  <JFXCheckBox fx:id="pcG" onAction="#acGClicked" prefHeight="43.0" prefWidth="476.0" styleClass="text-field" stylesheets="@Fenetre2.css" text="2194 Complément PC Famille VD Retenue" unCheckedColor="#10da86" GridPane.rowIndex="8">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </JFXCheckBox>
+                  <JFXCheckBox fx:id="lppG" onAction="#acGclciked" prefHeight="43.0" prefWidth="463.0" styleClass="text-field" stylesheets="@Fenetre2.css" text="2353 LPP/CRP SO Retenue " unCheckedColor="#10da86" GridPane.rowIndex="9">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </JFXCheckBox>
+                  <JFXCheckBox fx:id="crpG" onAction="#crpGclicked" prefHeight="43.0" prefWidth="472.0" styleClass="text-field" stylesheets="@Fenetre2.css" text="2423 Rente transitoire/Retraite anticipée" unCheckedColor="#10da86" GridPane.rowIndex="10">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </JFXCheckBox>
+                  <JFXCheckBox fx:id="cspG" onAction="#crpGclicked" prefHeight="39.0" prefWidth="396.0" styleClass="text-field" stylesheets="@Fenetre2.css" text="2503 CSP FVE Retenue" unCheckedColor="#10da86" visible="false" GridPane.rowIndex="11">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </JFXCheckBox>
+                  <JFXCheckBox fx:id="iijG" onAction="#crpGclcked" prefHeight="43.0" prefWidth="483.0" styleClass="text-field" stylesheets="@Fenetre2.css" text="2735 IJ maladie Autre % matrice Retenue" unCheckedColor="#10da86" GridPane.rowIndex="12">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </JFXCheckBox>
+                  <Label fx:id="deductionsG" prefHeight="43.0" prefWidth="386.0" text="2998 TOTAL DES DEDUCTIONS" GridPane.rowIndex="13">
+                     <font>
+                        <Font name="Segoe UI Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <JFXCheckBox fx:id="repaG" onAction="#crpGclicked" prefHeight="39.0" prefWidth="396.0" styleClass="text-field" stylesheets="@Fenetre2.css" text="3151 Panier repas (montant)" unCheckedColor="#10da86" GridPane.rowIndex="15">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </JFXCheckBox>
+                  <JFXCheckBox fx:id="fraixG" onAction="#crpGclicked" prefHeight="39.0" prefWidth="396.0" styleClass="text-field" stylesheets="@Fenetre2.css" text="3103 Frais de véhicule forfait" unCheckedColor="#10da86" GridPane.rowIndex="16">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </JFXCheckBox>
+                  <JFXCheckBox fx:id="allocationG" onAction="#allocationGclicked" prefHeight="39.0" prefWidth="396.0" styleClass="text-field" stylesheets="@Fenetre2.css" text="1330 Allocations familiales " unCheckedColor="#10da86" GridPane.rowIndex="17">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </JFXCheckBox>
+                  <JFXCheckBox fx:id="totRembourG" onAction="#totRembourGclik" prefHeight="43.0" prefWidth="485.0" styleClass="text-field" stylesheets="@Fenetre2.css" text="3199 TOTAL AUTRES REMBOURSEMENTS" unCheckedColor="#10da86" GridPane.rowIndex="18">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </JFXCheckBox>
+                  <Label fx:id="netG" prefHeight="34.0" prefWidth="386.0" text="       2999 SALAIRE NET" textFill="WHITE" GridPane.rowIndex="14">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+            <Label layoutX="38.0" layoutY="330.0" prefHeight="24.0" prefWidth="379.0" text="Genres de salaire" textFill="#85ff55" AnchorPane.bottomAnchor="854.0" AnchorPane.leftAnchor="38.0">
+               <font>
+                  <Font name="Segoe UI Bold" size="20.0" />
+               </font>
+            </Label>
+            <Line endX="1043.378662109375" layoutX="149.0" layoutY="357.0" startX="-103.0" strokeWidth="3.0" AnchorPane.bottomAnchor="849.5" AnchorPane.leftAnchor="44.5">
+               <fill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#bc3f00" />
+                        <Stop color="#fffa00" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </fill>
+            </Line>
+            <Label layoutX="527.0" layoutY="330.0" prefHeight="24.0" prefWidth="72.0" text="Base" textFill="#85ff55" AnchorPane.bottomAnchor="854.0" AnchorPane.leftAnchor="527.0">
+               <font>
+                  <Font name="Segoe UI Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="196.0" layoutY="979.0" prefHeight="24.0" prefWidth="104.0" text="Paiement " textFill="#85ff55" AnchorPane.bottomAnchor="205.0" AnchorPane.leftAnchor="196.0">
+               <font>
+                  <Font name="Segoe UI Bold" size="20.0" />
+               </font>
+            </Label>
+            <Line endX="1043.378662109375" layoutX="148.0" layoutY="1003.0" startX="-103.0" strokeWidth="3.0" AnchorPane.bottomAnchor="203.5" AnchorPane.leftAnchor="43.5">
+               <fill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#bc3f00" />
+                        <Stop color="#fffa00" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </fill>
+            </Line>
+            <GridPane layoutX="509.0" layoutY="478.0" prefHeight="236.0" prefWidth="108.0" AnchorPane.bottomAnchor="433.0" AnchorPane.leftAnchor="509.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="656.0" minWidth="10.0" prefWidth="407.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label fx:id="aanp" prefHeight="32.0" prefWidth="106.0" textFill="WHITE" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="avs" prefHeight="32.0" prefWidth="106.0" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ac" prefHeight="32.0" prefWidth="106.0" textFill="WHITE" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="pacFamille" prefHeight="32.0" prefWidth="106.0" textFill="WHITE" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lpp" prefHeight="32.0" prefWidth="106.0" textFill="WHITE" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="crp" prefHeight="32.0" prefWidth="106.0" textFill="WHITE" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="csp" prefHeight="32.0" prefWidth="106.0" textFill="WHITE" GridPane.rowIndex="6">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ij" prefHeight="32.0" prefWidth="106.0" textFill="WHITE" GridPane.rowIndex="7">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+            <GridPane layoutX="628.0" layoutY="513.0" prefHeight="245.0" prefWidth="108.0" AnchorPane.bottomAnchor="433.0" AnchorPane.leftAnchor="628.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="656.0" minWidth="10.0" prefWidth="407.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="135.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="91.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="104.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="98.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="87.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="90.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="94.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <JFXTextField fx:id="tauxAVS" alignment="CENTER" focusColor="#47cd54" prefHeight="63.0" prefWidth="108.0" styleClass="text-field2" text="5.275" unFocusColor="#fff8f8">
+                     <font>
+                        <Font name="Segoe UI Bold" size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="tauxAC" alignment="CENTER" focusColor="#47cd54" styleClass="text-field2" text="1.1" unFocusColor="#fff8f8" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Segoe UI Bold" size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="tauxAANP" alignment="CENTER" focusColor="#47cd54" styleClass="text-field2" text="2.25" unFocusColor="#fff8f8" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Segoe UI Bold" size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="tauxPC" alignment="CENTER" focusColor="#47cd54" styleClass="text-field2" text="0.06" unFocusColor="#fff8f8" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Segoe UI Bold" size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="tauxLPP" alignment="CENTER" focusColor="#3ad33a" styleClass="text-field2" text="5.5" unFocusColor="WHITE" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Segoe UI Bold" size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="tauxCRP" alignment="CENTER" focusColor="#47cd54" prefHeight="17.0" prefWidth="108.0" styleClass="text-field2" text="0.8" unFocusColor="#fff8f8" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="Segoe UI Bold" size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="tauxCSP" alignment="CENTER" focusColor="#37c651" styleClass="text-field2" text="0" unFocusColor="WHITE" visible="false" GridPane.rowIndex="6">
+                     <font>
+                        <Font name="Segoe UI Bold" size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="tauxIJ" alignment="CENTER" focusColor="#47cd54" styleClass="text-field2" text="1.02" unFocusColor="#fff8f8" GridPane.rowIndex="7">
+                     <font>
+                        <Font name="Segoe UI Bold" size="15.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </GridPane>
+            <Label layoutX="659.0" layoutY="330.0" prefHeight="24.0" prefWidth="72.0" text="Taux %" textFill="#85ff55" AnchorPane.bottomAnchor="854.0" AnchorPane.leftAnchor="659.0">
+               <font>
+                  <Font name="Segoe UI Bold" size="20.0" />
+               </font>
+            </Label>
+            <GridPane layoutX="770.0" layoutY="361.0" prefHeight="111.0" prefWidth="108.0" AnchorPane.bottomAnchor="736.0" AnchorPane.leftAnchor="770.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="656.0" minWidth="10.0" prefWidth="407.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <JFXTextField fx:id="tauxSalaire" alignment="CENTER" focusColor="#3ada47" prefHeight="42.0" prefWidth="108.0" styleClass="text-field2" text="0" unFocusColor="#fffbfb">
+                     <font>
+                        <Font name="Segoe UI Bold" size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="tauxJFer" alignment="CENTER" focusColor="#3ada47" prefHeight="44.0" prefWidth="108.0" styleClass="text-field2" text="0" unFocusColor="#fffbfb" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Segoe UI Bold" size="15.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </GridPane>
+            <Label layoutX="788.0" layoutY="330.0" prefHeight="24.0" prefWidth="72.0" text="Taux" textFill="#85ff55" AnchorPane.bottomAnchor="854.0" AnchorPane.leftAnchor="788.0">
+               <font>
+                  <Font name="Segoe UI Bold" size="20.0" />
+               </font>
+            </Label>
+            <GridPane layoutX="928.0" layoutY="371.0" prefHeight="114.0" prefWidth="108.0" AnchorPane.bottomAnchor="730.0" AnchorPane.leftAnchor="928.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="656.0" minWidth="10.0" prefWidth="407.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="43.0" minHeight="0.0" prefHeight="9.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="62.0" minHeight="10.0" prefHeight="62.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <JFXTextField fx:id="qntSalair" alignment="CENTER" focusColor="#3ada47" onKeyReleased="#qntSalairEntre" styleClass="text-field2" text="0" unFocusColor="#fcf7f7">
+                     <font>
+                        <Font name="Segoe UI Bold" size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="qntJFer" alignment="CENTER" focusColor="#3ada47" onKeyReleased="#qntJFerEntred" prefHeight="52.0" prefWidth="108.0" styleClass="text-field2" text="0" unFocusColor="#fffbfb" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Segoe UI Bold" size="15.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </GridPane>
+            <Label layoutX="936.0" layoutY="330.0" prefHeight="24.0" prefWidth="92.0" text="Quantité" textFill="#85ff55" AnchorPane.bottomAnchor="854.0" AnchorPane.leftAnchor="936.0">
+               <font>
+                  <Font name="Segoe UI Bold" size="20.0" />
+               </font>
+            </Label>
+            <GridPane layoutX="1074.0" layoutY="376.0" prefHeight="604.0" prefWidth="108.0" AnchorPane.bottomAnchor="228.0" AnchorPane.leftAnchor="1074.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="656.0" minWidth="10.0" prefWidth="407.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="55.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label fx:id="mntVacance" prefHeight="24.0" prefWidth="106.0" text="0" textFill="WHITE" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="mntFeries" prefHeight="24.0" prefWidth="106.0" text="0" textFill="WHITE" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="mntSalaire13" prefHeight="24.0" prefWidth="106.0" text="0" textFill="WHITE" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="mntBrut" prefHeight="43.0" prefWidth="386.0" text="0" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="mntAVS" prefHeight="24.0" prefWidth="106.0" text="0" textFill="WHITE" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="mntAC" prefHeight="24.0" prefWidth="106.0" text="0" textFill="WHITE" GridPane.rowIndex="6">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="mntAANP" prefHeight="24.0" prefWidth="106.0" text="0" textFill="WHITE" GridPane.rowIndex="7">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="mntPC" prefHeight="24.0" prefWidth="106.0" text="0" textFill="WHITE" GridPane.rowIndex="8">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="mntLPP" prefHeight="24.0" prefWidth="106.0" text="0" textFill="WHITE" GridPane.rowIndex="9">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="mntRCRP" prefHeight="24.0" prefWidth="106.0" text="0" textFill="WHITE" GridPane.rowIndex="10">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="mntCSP" prefHeight="24.0" prefWidth="106.0" text="0" textFill="WHITE" visible="false" GridPane.rowIndex="11">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="mntIJ" prefHeight="24.0" prefWidth="106.0" text="0" textFill="WHITE" GridPane.rowIndex="12">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="mntTotalD" prefHeight="43.0" prefWidth="108.0" text="0" GridPane.rowIndex="13">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="mntnet" prefHeight="24.0" prefWidth="106.0" text="0" textFill="WHITE" GridPane.rowIndex="14">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="mntTotalRemb" prefHeight="29.0" prefWidth="106.0" text="0" textFill="WHITE" GridPane.rowIndex="18">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="mntSalaireHoraire" prefHeight="24.0" prefWidth="106.0" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="mntPanier" alignment="CENTER" focusColor="#47cd54" onKeyReleased="#mntPanierKey" prefHeight="63.0" prefWidth="108.0" styleClass="text-field2" text="0" unFocusColor="#fff8f8" GridPane.rowIndex="15">
+                     <font>
+                        <Font name="Segoe UI Bold" size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="mntFrais" alignment="CENTER" focusColor="#47cd54" onKeyReleased="#mntFraisKey" prefHeight="63.0" prefWidth="108.0" styleClass="text-field2" text="0" unFocusColor="#fff8f8" GridPane.rowIndex="16">
+                     <font>
+                        <Font name="Segoe UI Bold" size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="mntAlloc" alignment="CENTER" focusColor="#47cd54" onKeyReleased="#mntAllocKey" prefHeight="63.0" prefWidth="108.0" styleClass="text-field2" text="0" unFocusColor="#fff8f8" GridPane.rowIndex="17">
+                     <font>
+                        <Font name="Segoe UI Bold" size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <Label fx:id="mntSalaireHoraire" layoutX="10.0" layoutY="130.0" prefHeight="43.0" prefWidth="386.0" text="0" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+            <Label layoutX="1093.0" layoutY="330.0" prefHeight="24.0" prefWidth="92.0" text="Montant" textFill="#85ff55" AnchorPane.bottomAnchor="854.0" AnchorPane.leftAnchor="1093.0">
+               <font>
+                  <Font name="Segoe UI Bold" size="20.0" />
+               </font>
+            </Label>
+            <Line endX="1043.378662109375" layoutX="148.0" layoutY="985.0" startX="-103.0" strokeWidth="3.0" AnchorPane.bottomAnchor="117.5" AnchorPane.leftAnchor="43.5">
+               <fill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#bc3f00" />
+                        <Stop color="#fffa00" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </fill>
+            </Line>
+            <Label layoutX="45.0" layoutY="1008.0" prefHeight="24.0" prefWidth="99.0" text="Virement " textFill="#85ff55" AnchorPane.bottomAnchor="176.0" AnchorPane.leftAnchor="45.0">
+               <font>
+                  <Font name="Segoe UI Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="mntVirement" layoutX="415.0" layoutY="1008.0" prefHeight="33.0" prefWidth="131.0" text="0" textFill="#85ff55" AnchorPane.bottomAnchor="167.0" AnchorPane.leftAnchor="415.0">
+               <font>
+                  <Font name="Segoe UI Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="textBanqueDate" layoutX="50.0" layoutY="1041.0" prefHeight="42.0" prefWidth="1135.0" textFill="WHITE" AnchorPane.bottomAnchor="125.0" AnchorPane.leftAnchor="50.0">
+               <font>
+                  <Font name="Segoe UI Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="37.0" layoutY="1003.0" prefHeight="24.0" prefWidth="929.0" text="Ce décompte est établi par l'employeur sur la base des informations transmises par l'employer. " textFill="WHITE" AnchorPane.bottomAnchor="77.0" AnchorPane.leftAnchor="37.0">
+               <font>
+                  <Font name="Segoe UI Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="37.0" layoutY="1034.0" prefHeight="24.0" prefWidth="887.0" text="Nous vous prions de le vérifier immédiatement et de signaler toute erreur  à l'entreprise." textFill="WHITE" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="37.0">
+               <font>
+                  <Font name="Segoe UI Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="36.0" layoutY="158.0" prefHeight="23.0" prefWidth="132.0" text="Classe salaire :" textFill="#eeeeee" AnchorPane.leftAnchor="36.0" AnchorPane.topAnchor="158.0">
+               <font>
+                  <Font name="Segoe UI Bold" size="18.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="classeSalaire" focusColor="#39d741" layoutX="183.0" layoutY="142.0" prefHeight="31.0" prefWidth="211.0" styleClass="text-field2" stylesheets="@Fenetre2.css" unFocusColor="#f8f8f8" AnchorPane.leftAnchor="183.0" AnchorPane.topAnchor="142.0" />
+            <JFXButton fx:id="bntEnregist" layoutX="1044.0" layoutY="1117.0" onAction="#bntEnregistClicked" prefHeight="41.0" prefWidth="149.0" styleClass="ipad-grey2" stylesheets="@Fenetre.css" text="Enregistrer" AnchorPane.bottomAnchor="46.0" AnchorPane.rightAnchor="171.0">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </JFXButton>
+            <Label fx:id="paiement" layoutX="1075.0" layoutY="977.0" prefHeight="28.0" prefWidth="107.0" text="0" textFill="#85ff55">
+               <font>
+                  <Font name="Segoe UI Bold" size="21.0" />
+               </font>
+            </Label>
+            <GridPane layoutX="528.0" layoutY="399.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="indVacan" prefHeight="32.0" prefWidth="106.0" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="salair13" prefHeight="32.0" prefWidth="106.0" textFill="WHITE" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="tauxIndem" alignment="CENTER" focusColor="#47cd54" prefHeight="31.0" prefWidth="108.0" styleClass="text-field2" text="10.64" unFocusColor="#fff8f8" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="Segoe UI Bold" size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="taux13" alignment="CENTER" focusColor="#47cd54" prefHeight="31.0" prefWidth="108.0" styleClass="text-field2" text="8.333" unFocusColor="#fff8f8" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Segoe UI Bold" size="15.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </GridPane>
+            <Button fx:id="addRemb" layoutX="982.0" layoutY="911.0" mnemonicParsing="false" onAction="#addRembClicked" prefHeight="35.0" prefWidth="56.0" styleClass="ipad-grey" stylesheets="@Fenetre.css" text="+">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </content>
+</fx:root>

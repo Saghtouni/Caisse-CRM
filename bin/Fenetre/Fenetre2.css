@@ -1,0 +1,39 @@
+
+
+
+.CAISSE-FINAL{
+	-fx-background-color: linear-gradient(#5C2B7A, #51639C, #4C7EAC, #469CBE, 	#3EC1D5);
+}
+
+
+
+.text-field
+{
+    -fx-font-size: 13pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: white;
+}
+.combo-box
+{
+
+    -fx-font-size: 16pt;
+    -fx-font-family: "Segoe UI Semibold";
+    
+}
+
+/*.combo-box-popup .list-view 
+{
+   
+    -fx-background-insets: 0, 1;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 8, 0.0 , 0 , 0 );
+    
+}    */
+.combo-box .list-cell 
+{
+     
+    -fx-text-fill:#85ff55;
+  
+}
+
+

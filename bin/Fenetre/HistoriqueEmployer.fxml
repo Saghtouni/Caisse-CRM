@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="990.0" styleClass="CAISSE-FINAL" stylesheets="@Fenetre2.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView fx:id="tabSalaire" layoutX="-1.0" layoutY="75.0" prefHeight="535.0" prefWidth="990.0" stylesheets="@Fenetre.css">
+        <columns>
+          <TableColumn fx:id="periode" prefWidth="210.0" text="Pèriode" />
+          <TableColumn fx:id="salaireBrut" prefWidth="197.0" text="Salaire brut" />
+            <TableColumn fx:id="deduction" prefWidth="170.0" text="Déductions " />
+            <TableColumn fx:id="embourse" prefWidth="198.0" text="Autres remboursements" />
+            <TableColumn fx:id="paiement" prefWidth="214.0" text="Paiement " />
+        </columns>
+      </TableView>
+      <HBox prefHeight="74.0" prefWidth="349.0">
+         <children>
+            <Button fx:id="pdf" mnemonicParsing="false" onAction="#pdfClicked" prefHeight="72.0" prefWidth="114.0" styleClass="ipad-grey" stylesheets="@Fenetre.css" />
+            <Button fx:id="print" mnemonicParsing="false" onAction="#printClicked" prefHeight="72.0" prefWidth="114.0" styleClass="ipad-grey" stylesheets="@Fenetre.css" />
+            <Button fx:id="certifecate" mnemonicParsing="false" onAction="#certifecateClicked" prefHeight="72.0" prefWidth="114.0" styleClass="ipad-grey" stylesheets="@Fenetre.css" />
+         </children>
+      </HBox>
+      <JFXComboBox fx:id="dateCherche" focusColor="WHITE" layoutX="804.0" layoutY="14.0" onAction="#dateChercheClicked1" prefHeight="47.0" prefWidth="148.0" styleClass="jfx-combo-box" stylesheets="@Fenetre2.css" unFocusColor="WHITE" AnchorPane.rightAnchor="38.0" AnchorPane.topAnchor="14.0" />
+   </children>
+</fx:root>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<fx:root fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#codeBar" prefHeight="865.0" prefWidth="1254.0" type="javafx.scene.layout.BorderPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <TableView fx:id="tableCaisse" onKeyPressed="#codeBar" onMouseClicked="#MousTableClicked" prefHeight="531.0" prefWidth="331.0" stylesheets="@Fenetre.css" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="columnProduit" prefWidth="178.0" text="Produit" />
+          <TableColumn fx:id="columnPrix" minWidth="0.0" prefWidth="89.99996948242188" text="Prix" />
+            <TableColumn fx:id="columnQuantite" prefWidth="62.0" text="QNT" />
+        </columns>
+      </TableView>
+   </left>
+   <center>
+      <AnchorPane onKeyPressed="#codeBar" prefHeight="659.0" prefWidth="860.0" styleClass="CAISSE-FINAL" stylesheets="@Fenetre.css" BorderPane.alignment="CENTER">
+         <children>
+            <ScrollPane fx:id="scrollPane" layoutX="97.0" layoutY="1.0" onKeyPressed="#codeBar" prefHeight="171.0" prefWidth="594.0" styleClass="PaneCaisse" stylesheets="@Fenetre.css" AnchorPane.leftAnchor="97.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="1.0" />
+            <ScrollPane fx:id="scrollPane1" layoutX="97.0" layoutY="185.0" onKeyPressed="#codeBar" prefHeight="182.0" prefWidth="596.0" styleClass="PaneCaisse" stylesheets="@Fenetre.css" AnchorPane.bottomAnchor="164.0" AnchorPane.leftAnchor="97.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="185.0" />
+            <GridPane fx:id="gridPane3" layoutX="153.0" layoutY="374.0" prefHeight="151.0" prefWidth="487.0" AnchorPane.bottomAnchor="6.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="bntCash" mnemonicParsing="false" onAction="#bntCashClicked" prefHeight="151.0" prefWidth="254.0" styleClass="ipad-grey" stylesheets="@Fenetre.css" />
+                  <Button fx:id="bntCarte" mnemonicParsing="false" onAction="#bntCarteCadClicked" prefHeight="151.0" prefWidth="253.0" styleClass="ipad-grey" stylesheets="@Fenetre.css" GridPane.columnIndex="1" />
+                  <Button fx:id="bntAfter" mnemonicParsing="false" onAction="#bntAfterClicked" prefHeight="151.0" prefWidth="259.0" styleClass="ipad-grey" stylesheets="@Fenetre.css" GridPane.columnIndex="2" />
+               </children>
+            </GridPane>
+            <GridPane fx:id="gridPane4" prefHeight="514.0" prefWidth="87.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="bntMoins" mnemonicParsing="false" onMouseClicked="#bntMoinsClicked" prefHeight="178.0" prefWidth="124.0" styleClass="ipad-grey" stylesheets="@Fenetre.css" text="-" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="48.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="bntPour" mnemonicParsing="false" onMouseClicked="#bntPourClicked" prefHeight="178.0" prefWidth="124.0" styleClass="ipad-grey" stylesheets="@Fenetre.css" text="\%" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="bntPlus" mnemonicParsing="false" onMouseClicked="#bntPlusClicked" prefHeight="178.0" prefWidth="112.0" styleClass="ipad-grey" stylesheets="@Fenetre.css" text="+">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="bntX" mnemonicParsing="false" onMouseClicked="#bntXClicked" prefHeight="128.0" prefWidth="78.0" styleClass="ipad-grey" stylesheets="@Fenetre.css" text="X" textFill="#eb0b0b" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="43.0" />
+                     </font>
+                  </Button>
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <AnchorPane prefHeight="85.0" prefWidth="1280.0" styleClass="CAISSE-FINAL" stylesheets="@Fenetre.css" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="ImageUser" fitHeight="86.0" fitWidth="110.0" layoutX="1043.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="129.0" AnchorPane.topAnchor="1.0" />
+            <Label fx:id="NameUser" layoutX="1148.0" layoutY="2.0" prefHeight="35.0" prefWidth="125.0" AnchorPane.bottomAnchor="48.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="2.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="FirstNameUser" layoutX="1148.0" layoutY="43.0" prefHeight="35.0" prefWidth="125.0" AnchorPane.bottomAnchor="7.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="43.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <HBox layoutY="1.0" prefHeight="86.0" prefWidth="400.0">
+               <children>
+                  <Button fx:id="checkButton" mnemonicParsing="false" onAction="#checkButtonClicked" prefHeight="93.0" prefWidth="142.0" styleClass="ipad-grey" stylesheets="@Fenetre.css">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#xButtonClicked" prefHeight="93.0" prefWidth="142.0" styleClass="ipad-grey" stylesheets="@Fenetre.css" text="X" fx:id="xButton">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold" size="46.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="zButton" mnemonicParsing="false" onAction="#zButtonClicked" prefHeight="93.0" prefWidth="142.0" styleClass="ipad-grey" stylesheets="@Fenetre.css" text="Z">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold" size="46.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="returnproductbtn" mnemonicParsing="false" onAction="#returnproductbtnClicked" prefHeight="93.0" prefWidth="142.0" styleClass="ipad-grey" />
+               </children>
+            </HBox>
+            <Button fx:id="switchButton" layoutX="899.0" layoutY="1.0" mnemonicParsing="false" onAction="#switchButtonClicked" prefHeight="86.0" prefWidth="108.0" styleClass="ipad-grey" stylesheets="@Fenetre.css" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="239.0" AnchorPane.topAnchor="1.0">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Button>
+            <JFXButton layoutX="527.0" prefHeight="86.0" prefWidth="111.0" ripplerFill="WHITE" styleClass="test3" text="X" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="68.0" prefWidth="1280.0" styleClass="test3" stylesheets="@Fenetre.css" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="AfficcheurSomme" layoutY="-2.0" prefHeight="87.0" prefWidth="332.0">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </TextField>
+            <ImageView fx:id="ImageLogoText" fitHeight="44.0" fitWidth="232.0" layoutX="1034.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="21.0" AnchorPane.rightAnchor="14.0" />
+            <Label fx:id="timeNow" layoutX="344.0" layoutY="21.0" prefHeight="44.0" prefWidth="290.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="344.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Button layoutX="437.0" layoutY="27.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="183.0" styleClass="test3" text="Button" />
+         </children>
+      </AnchorPane>
+   </bottom>
+</fx:root>

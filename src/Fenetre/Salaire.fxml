@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" styleClass="CAISSE-FINAL" stylesheets="@Fenetre2.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="7.0" layoutY="1.0" prefHeight="27.0" prefWidth="212.0" text="Décompte de salaire" textFill="#eeeeee">
+         <font>
+            <Font name="Segoe UI Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="1031.0" layoutY="14.0" prefHeight="27.0" prefWidth="301.0" text="F-R Décoration Peinture Sàrl " textFill="#eeeeee">
+         <font>
+            <Font name="Segoe UI Bold" size="21.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="7.0" layoutY="30.0" prefHeight="70.0" prefWidth="327.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="55.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="37.0" prefWidth="164.0" text="Période :" textFill="#eeeeee">
+               <font>
+                  <Font name="Segoe UI Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label prefHeight="47.0" prefWidth="164.0" text="Département:" textFill="#eeeeee" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Segoe UI Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label prefHeight="37.0" prefWidth="161.0" text="No personnel :" textFill="#eeeeee" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Segoe UI Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="date" prefHeight="41.0" prefWidth="163.0" textFill="#eeeeee" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Segoe UI Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="departement" prefHeight="43.0" prefWidth="163.0" textFill="#eeeeee" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Segoe UI Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="numPersonal" prefHeight="36.0" prefWidth="163.0" textFill="#eeeeee" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Segoe UI Bold" size="21.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <GridPane layoutX="483.0" layoutY="65.0" prefHeight="120.0" prefWidth="343.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="35.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="62.0" minHeight="10.0" prefHeight="58.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="monsieur" prefHeight="30.0" prefWidth="346.0" textFill="#eeeeee">
+               <font>
+                  <Font name="Segoe UI Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="nomPrenom" prefHeight="31.0" prefWidth="353.0" textFill="#eeeeee" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Segoe UI Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label prefHeight="41.0" prefWidth="163.0" textFill="#eeeeee" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Segoe UI Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="adresse" prefHeight="60.0" prefWidth="343.0" textFill="#eeeeee" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Segoe UI Bold" size="21.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <JFXButton layoutX="1031.0" layoutY="99.0" prefHeight="41.0" prefWidth="149.0" styleClass="ipad-grey" stylesheets="@Fenetre.css" text="Employer">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </JFXButton>
+      <GridPane layoutX="7.0" layoutY="112.0" prefHeight="70.0" prefWidth="327.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="55.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label prefHeight="37.0" prefWidth="164.0" text="Période :" textFill="#eeeeee">
+               <font>
+                  <Font name="Segoe UI Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label prefHeight="47.0" prefWidth="164.0" text="Département:" textFill="#eeeeee" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Segoe UI Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label prefHeight="37.0" prefWidth="161.0" text="No personnel :" textFill="#eeeeee" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Segoe UI Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="date1" prefHeight="41.0" prefWidth="163.0" textFill="#eeeeee" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Segoe UI Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="departement1" prefHeight="43.0" prefWidth="163.0" textFill="#eeeeee" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Segoe UI Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="numPersonal1" prefHeight="36.0" prefWidth="163.0" textFill="#eeeeee" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Segoe UI Bold" size="21.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <GridPane layoutX="7.0" layoutY="185.0" prefHeight="588.0" prefWidth="1321.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="656.0" minWidth="10.0" prefWidth="407.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="980.0" minWidth="10.0" prefWidth="956.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="55.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label prefHeight="19.0" prefWidth="621.0" text="                                      Genres de salaire" textFill="#85ff55">
+               <font>
+                  <Font name="Segoe UI Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="date11" prefHeight="41.0" prefWidth="163.0" textFill="#eeeeee" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Segoe UI Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="departement11" prefHeight="43.0" prefWidth="163.0" textFill="#eeeeee" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Segoe UI Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="numPersonal11" prefHeight="36.0" prefWidth="163.0" textFill="#eeeeee" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <font>
+                  <Font name="Segoe UI Bold" size="21.0" />
+               </font>
+            </Label>
+            <JFXCheckBox styleClass="text-field" stylesheets="@Fenetre2.css" GridPane.rowIndex="2" />
+            <JFXCheckBox prefHeight="0.0" prefWidth="102.0" styleClass="text-field" stylesheets="@Fenetre2.css" GridPane.rowIndex="3" />
+            <JFXCheckBox prefHeight="0.0" prefWidth="102.0" styleClass="text-field" stylesheets="@Fenetre2.css" GridPane.rowIndex="4" />
+            <CheckBox mnemonicParsing="false" text="CheckBox" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

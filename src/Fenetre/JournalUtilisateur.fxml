@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="624.0" prefWidth="853.0" styleClass="PaneCaisse2" stylesheets="@Fenetre.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView fx:id="tableticketsJournal" layoutY="74.0" prefHeight="552.0" prefWidth="853.0" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="74.0">
+         <columns>
+            <TableColumn fx:id="sommecol" prefWidth="214.0" text="Somme" />
+            <TableColumn fx:id="detailscol" prefWidth="336.0" text="Details" />
+            <TableColumn fx:id="statuscol" prefWidth="302.0" text="Status" />
+         </columns></TableView>
+      <Label fx:id="labeltotal" alignment="CENTER" layoutX="297.0" layoutY="14.0" prefHeight="33.0" prefWidth="109.0" text="Total = " textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnImprimer" layoutX="721.0" layoutY="5.0" mnemonicParsing="false" onAction="#btnImprimerCliked" prefHeight="62.0" prefWidth="109.0" styleClass="ipad-grey" stylesheets="@Fenetre.css" />
+      <Label fx:id="valeurDate" layoutX="32.0" layoutY="35.0" prefHeight="35.0" prefWidth="204.0" wrapText="true">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="user" layoutX="32.0" layoutY="2.0" prefHeight="35.0" prefWidth="204.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="valeurtotal" layoutX="396.0" layoutY="13.0" prefHeight="38.0" prefWidth="133.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
